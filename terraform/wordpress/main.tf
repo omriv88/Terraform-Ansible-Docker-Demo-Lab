@@ -10,6 +10,6 @@ resource "aws_instance" "wordpress" {
     vpc_security_group_ids = [ "sg-02bd12ea337b24edb" ]
 
     tags = {
-        Name = "wordpress"
+        Name = "wordpress1"
     }
 }
