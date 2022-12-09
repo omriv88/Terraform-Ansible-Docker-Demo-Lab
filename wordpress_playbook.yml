@@ -1,0 +1,9 @@
+printf "
+[defaults]
+host_key_checking = False" | sudo tee /etc/ansible/ansible.cfg
+
+sudo mkdir /etc/ansible/group_vars 
+printf " 
+---
+ansible_ssh_private_key_file: ~/.ssh/wordpress.pem
+ansible_user: ubuntu" |sudo tee /etc/ansible/group_vars/tag_group_wordpress.yaml
