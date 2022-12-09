@@ -1,0 +1,13 @@
+---
+    - name: configure word press app on docker
+      hosts: tag_group_wordpress
+      
+      tasks:
+      
+        - name: Install Docker
+          become: yes
+          shell: |
+            apt-get update -y
+            yum install -y docker
+            systemctl start docker
+            systemctl enable docker 
