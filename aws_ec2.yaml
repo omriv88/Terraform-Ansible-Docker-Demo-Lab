@@ -1,0 +1,11 @@
+plugin: amazon.aws.aws_ec2
+botoprofile: DevopsUser
+regions:
+  - us-east-1
+strict: False
+keyed_group:
+  - prefix: tag
+    key: 'tags'
+compose:
+  ansible_host: ip_assress
+  
